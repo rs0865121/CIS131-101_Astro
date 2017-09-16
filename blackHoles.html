@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exoplanets</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="styles.css" rel="stylesheet">
+
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="background1" style="background-image:url(blackHoleBackground.fw.png); background-attachment:fixed;">
+		<div class="background2" style="background-color:darkgrey; opacity: 0.75;">
+			<div class="container" style="background-color:white;">
+				<div class="header clearfix">
+					<nav>
+					  <ul class="nav nav-pills pull-right">
+						<li class="h4" role="presentation"><a href="stars.html">Stars</a></li>
+						<li class="h4" role="presentation" class="active"><a href="blackHoles.html">Black Holes</a></li>
+						<li class="h4" role="presentation"><a href="#">Nebulae</a></li>
+						<li class="h4" role="presentation"><a href="planets.html">Planets</a></li>
+					  </ul>
+					</nav>
+					<h3 class="text-muted h2">Studious Astronomers</h3>
+				</div>
+
+				
+					<img class="img-responsive img-container" src="blackhole.jpg" id="myImage">
+					<div class="row marketing">
+						<div class="col-lg-12">
+							<h2 class="text-success">Black Hole Formation</h2>
+								<h4>Any black hole will have started out as an ordinary star. A star's mass is the sole factor that determines whether or not it will some day turn into a black hole. If a star contains enough mass
+							it will undergo a violent explosion known as a supernova. A supernova leaves behind an extremely dense glowing star that is no longer undergoing nuclear fusion but is beginning its cooling-off phase.
+							If this dense star core contains enough mass its gravity will overcome what's known as "neutron degeneracy pressure" and create a black hole. If the remaining star core does not contain enough mass, neutron
+							degeneracy pressure is able to "push back" against the stars gravity and prevent itself from turning into a black hole. In this case, the star that doesn't turn into a black hole will then be referred to as a neutron star.</h4>
+						</div>
+					</div>
+				
+				
+				
+				<div class="row marketing">
+					<div class="col-lg-12">
+						<h2 class="text-success">Black Hole Properties</h2>
+					</div>
+					<div class="col-lg-6">
+					  <h3 class="text-success">Accretion Disk</h3>
+					  <h4>In the case of a binary star system, it's possible for a black hole to possess an accretion disk. This means that if
+					  a star and black hole are close enough, conditions might be right for the black hole's gravitational pull to extract mass from the neighboring star.
+					  As the star's mass is siphoned off, the matter will form into an orbiting disk around the black hole. This accretion disk reaches extremely hot temperatures
+					  and will eventually begin to emit X-ray radiation. As long as these X-ray's don't pass the event horizon, they will escape the pull of the black hole and travel
+					  through the cosmos. This gives astronomers the chance to possibly identify the location of a black hole. It's important to remember that not all black holes are
+					  a part of a binary star system and, therefore, will not always possess an accretion disk.</h4>
+
+					  <h3 class="text-success">Event Horizon</h3>
+					  <h4>The event horizon can be thought of as a definitive boundary for where a black hole begins. A black hole's gravity is so strong that anything, including light, which
+					  passes over the event horizon into the black hole can not escape back out. Because light can not escape once it has passed the event horizon, nothing occuring within a black hole
+					  is observable to astronomers. This leads astronomers to studying the effects a black hole has on its surroundings as the best way to learn the properties and behaviour of black holes.</h4>
+					</div>
+					<div class="col-lg-6">
+					  <h3 class="text-success">Space-Time Curvature</h3>
+					  <h4>Einstein's theory of general relativity taught us to think about space not as a flat plain with objects moving around on it, but as fabric (known as space-time) which is warped
+					  by objects that exist within it. An easy analogy for this is to image a rubber sheet with objects of different masses and sizes scattered around it. The heavier and denser the object, the more
+					  it will sink into the rubber sheet. A black hole would have so much mass concentrated into such a small area, it would create a bottemless pit on the rubber sheet. This is an effective analogy for
+					  imagining a black hole but it's important to remember that this is a two-dimensional representation of space-time curvature. A spherical bottemless pit that could be approached from any
+					  direction is closer to how an actual black hole effects space-time.</h4>
+
+					 <h3 class="text-success">Singularity</h3>
+					 <h4>If you could survive passing over the event horizon you would approach what is referred to as a "singularity". Because the event horizon prevents a singularity from being physically observed, we must rely on
+					 our understanding of physics to explain the properties of one. The idea of a singularity can be summed up by understanding that nothing can counteract the gravity of a black hole. This means that
+					 all matter within a black hole is compressed into an infinitely dense and infinitely small point. While this can be hard to imagine, it's important to remember that our mathematical understanding of black holes
+					 and singularites makes us confident in our understanding of these occurences.</h4>
+					</div>
+				</div>
+				<footer class="footer">
+					<p>&copy; 2017 Starlords, Inc.</p>
+					<p>&copy; National Geographic</p>
+				</footer>
+			</div> <!-- /container -->		
+		</div>
+	</div>
+
+
+	<script>
+		var protostar = "protostar.png";
+		var theSwitch = 0;
+		function changeImage(starImg) {
+			document.getElementById('protostar').src = starImg;
+		}
+		function submitInfo() {
+			var name = document.getElementById("nameinput");
+			var email = document.getElementById("emailinput");
+			var star = document.getElementById("starinput");
+			(name.value && email.value && phone.value) ? alert("Thank You") : alert("Please fill in all fields");
+		}
+		document.getElementById("submit").addEventListener("click", submitInfo, false);
+	</script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
