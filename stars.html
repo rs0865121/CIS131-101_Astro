@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,7 +25,7 @@
 
   <body>
 
-    <div class="background1" style="background-image:url(starBackground.png); background-attachment:fixed;">
+    <div class="background1" style="background-image:url(photos/starBackground.png); background-attachment:fixed;">
 		<div class="background2" style="background-color:darkgrey; opacity: 0.75;">
 			<div class="container" style="background-color:white;">
 				<div class="header clearfix">
@@ -33,13 +33,13 @@
 						<ul class="nav nav-pills pull-right">
 							<li class="h4" role="presentation" class="active"><a href="stars.html">Stars</a></li>
 							<li class="h4" role="presentation"><a href="blackHoles.html">Black Holes</a></li>
-							<li class="h4" role="presentation"><a href="#">Nebulae</a></li>
+							<li class="h4" role="presentation"><a href="nebulae.html">Nebulae</a></li>
 							<li class="h4" role="presentation"><a href="planets.html">Planets</a></li>
 						</ul>
 					</nav>
 					<h3 class="text-muted h2">Studious Astronomers</h3>
-				</div>		
-				<img class="img-responsive img-container" src="protostar.jpg" id="myImage">	
+				</div>
+				<img class="img-responsive img-container" src="photos/protostar.jpg" id="myImage">
 				<div class="row marketing">
 					<div class="col-lg-12">
 						<h2 class="text-success">Stars</h2>
@@ -61,26 +61,26 @@
 						the heavens by these stars.</h4>
 
 						<h2 class="text-success">Size</h2>
-						<h4>Stars may occur in many sizes, which are classified in a range from dwarfs to 
+						<h4>Stars may occur in many sizes, which are classified in a range from dwarfs to
 						supergiants. Supergiants may have radii a thousand times larger than that of our own sun. Though the
 						larger a star's mass, the shorter its lifespan will be.</h4>
 					</div>
 
 					<div class="col-lg-6">
 						<h2 class="text-success">Life Cycle</h2>
-						<h3 onclick="document.getElementById('myImage').src='protostar.jpg'" class="text-success">Protostars</h3>
-						<h4>Young stars at this stage are called protostars. As they develop, they accumulate mass from the 
-						clouds around them and grow. As stars move toward the end of their lives much of their hydrogen 
+						<h3 onclick="document.getElementById('myImage').src='photos/protostar.jpg'" class="text-success">Protostars</h3>
+						<h4>Young stars at this stage are called protostars. As they develop, they accumulate mass from the
+						clouds around them and grow. As stars move toward the end of their lives much of their hydrogen
 						has been converted to helium.</h4>
-						<h3 onclick="document.getElementById('myImage').src='redGiant.jpg'" class="text-success">Red Giants</h3>
+						<h3 onclick="document.getElementById('myImage').src='photos/redGiant.jpg'" class="text-success">Red Giants</h3>
 						<h4>Helium sinks to the star's core and raises the star's temperature and size.
-						These large, swelling stars are known as red giants. The red giant phase is a prelude to a star 
+						These large, swelling stars are known as red giants. The red giant phase is a prelude to a star
 						called a White Dwarf.</h4>
-						<h3 onclick="document.getElementById('myImage').src='whiteDwarf.jpg'" class="text-success">White Dwarfs</h3>
-						<h4 onclick="document.getElementById('myImage').src='realWhiteDwarf.png'">White dwarfs cool for billions of years, until they eventually go dark and produce 
+						<h3 onclick="document.getElementById('myImage').src='photos/whiteDwarf.jpg'" class="text-success">White Dwarfs</h3>
+						<h4 onclick="document.getElementById('myImage').src='photos/realWhiteDwarf.png'">White dwarfs cool for billions of years, until they eventually go dark and produce
 						no energy. At this point, which scientists have yet to observe, such stars become known as black dwarfs.
 						Most stars instead go out with a bang. Such events are called Supernovae.</h4>
-						<h3 onclick="document.getElementById('myImage').src='neutronStar.jpg'" class="text-success">Neutron Stars</h3>
+						<h3 onclick="document.getElementById('myImage').src='photos/neutronStar.jpg'" class="text-success">Neutron Stars</h3>
 						<h4>These explosions leave behind a small core that may become a neutron star or even, if the remnant
 						is large enough, a black hole.</h4>
 					</div>
@@ -88,23 +88,26 @@
 						<article>
 							<h2 class="formtitle">Name your own star!</h2>
 							<form>
-								<fieldset id="nameYourStar">
+								<fieldset id="nameYourObject">
 									<label for="nameinput">
 										Name
-										<input type="text" id="nameinput" name="name" />
+										<input type="text" id="nameInput" name="name" />
 									</label>
-									<label for="emailinput">
+									<label for="emailInput">
 										Email
-										<input type="text" id="emailinput" name="email" />
+										<input type="text" id="emailInput" name="email" />
 									</label>
-									<label for="starinput">
+									<label for="objectInput">
 										Name of your star
-										<input type="text" id="starinput" name="star" />
+										<input type="text" id="objectInput" name="star" />
 									</label>
 								</fieldset>
 								<fieldset id="submitbutton">
 									<input type="button" id="submit" value="Submit" />
 								</fieldset>
+                <p id="outputName"></p>
+                <p id="outputEmail"></p>
+                <p id="outputObject"></p>
 							</form>
 						</article>
 					</div>
@@ -117,24 +120,9 @@
 			</div> <!-- /container -->
 		</div>
 	</div>
-    
-	<script>
-		var protostar = "protostar.png";
-		var theSwitch = 0;
-		
-		function changeImage(starImg) {
-			document.getElementById('protostar').src = starImg;
-		}
-		
-		function submitInfo() {
-			var name = document.getElementById("nameinput");
-			var email = document.getElementById("emailinput");
-			var star = document.getElementById("starinput");
-			(name.value && email.value && phone.value) ? alert("Thank You") : alert("Please fill in all fields");
-		}
-		document.getElementById("submit").addEventListener("click", submitInfo, false);
-	</script>
+
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>
