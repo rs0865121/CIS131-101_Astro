@@ -135,6 +135,7 @@ label {
   }
   #animation{
     position: absolute;
+    width: 120px;
   }
 .formtitle{
 	margin-left:100px;

@@ -18,15 +18,13 @@ function submitInfo() {
 function move(){
   var elem = document.getElementById('animation');
   var pos = 0;
-  var id = setInterval(frame, 5);
+  setInterval(frame, 5);
   function frame(){
-    if(pos==1900){
-      /*clearInterval();*/
+    if(pos == 1800){
       pos = 0;
     }
-    else{
+     else{
       pos++;
-      /*elem.style.top = pos +'px';*/
       elem.style.left = pos + 'px';
     }
   }
