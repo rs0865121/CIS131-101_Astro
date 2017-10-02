@@ -14,4 +14,19 @@ function submitInfo() {
   document.getElementById('outputObject').innerHTML = ("Your Objects Name: " + object);
   /*(name.value && email.value && phone.value) ? alert("Thank You") : alert("Please fill in all fields");*/
 }
+
+//*Function to create a floating Earth that floats across the screen.
+function floatingEarth(){
+  var el = document.getElementById("earth");
+  var position = 0;
+  setInterval(frame, 5);
+  function frame(){
+    if(position == 1800){
+      position = 0;
+    }else{
+      position++;
+      el.style.left = position + "px";
+    }
+  }
+}
 document.getElementById("submit").addEventListener("click", submitInfo, false);
